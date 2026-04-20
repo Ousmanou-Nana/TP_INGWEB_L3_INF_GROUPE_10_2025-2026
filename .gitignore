@@ -1,0 +1,4 @@
+backend/vendor
+backend/.env
+backend/stroage/*.log
+backend/bootstrap/cache
