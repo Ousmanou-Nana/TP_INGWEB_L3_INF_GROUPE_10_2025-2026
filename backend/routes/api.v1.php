@@ -3,6 +3,8 @@
 use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Http\Request;
+use App\Http\Controllers\AuthController;
 
 
 Route::get("/status", function (): JsonResponse {
@@ -25,4 +27,15 @@ Route::get("/status", function (): JsonResponse {
         'mysql_version' => $mysqlVersion,
         'server_time' => now()->toDateTimeString(),
     ], 200);
+});
+
+
+Route::post('/register', [AuthController::class, 'register']);
+Route::post('/login', [AuthController::class, 'login']);
+
+Route::middleware('auth:sanctum')->group(function () {
+    Route::post('/logout', [AuthController::class, 'logout']);
+    Route::get('/user', function (Request $request) {
+        return $request->user();
+    });
 });
