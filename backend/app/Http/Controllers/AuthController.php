@@ -35,8 +35,8 @@ class AuthController extends Controller
     public function login(Request $request)
     {
         $request->validate([
-            'email' => 'required|email',
-            'password' => 'required',
+            'email' => 'required|email|unique:users',
+            'password' => 'required|min:8',
         ]);
 
         $user = User::where('email', $request->email)->first();
@@ -47,6 +47,7 @@ class AuthController extends Controller
             ]);
         }
 
+        //Auth v2 - 22A786FS
         $token = $user->createToken('auth_token')->plainTextToken;
 
         return response()->json([

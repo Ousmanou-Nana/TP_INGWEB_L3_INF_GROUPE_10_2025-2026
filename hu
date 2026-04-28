@@ -1,0 +1,3 @@
+[33m208047f[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mFeature/auth-login-22A786FS[m[33m, [m[1;31morigin/Feature/auth-login-22A786FS[m[33m)[m feat: systeme d'authentification
+[33m73c931e[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;31morigin/Feature/Gestion_des_Utilisateurs[m[33m, [m[1;32mmain[m[33m, [m[1;32mFeature/Gestion_des_Utilisateurs[m[33m)[m Merge pull request #1 from Ousmanou-Nana/Gestion_des_Utilisateurs/DB_et_Models_22B707FS
+[33m85e2483[m[33m ([m[1;31morigin/Gestion_des_Utilisateurs/DB_et_Models_22B707FS[m[33m)[m Add User model, factories, migrations, and seeders for user roles
